@@ -13,4 +13,8 @@ export class PlayerService {
   {
     return this.players;
   }
+  getPlayerById(id)
+  {
+    return this.af.database.object('/players/' + id);
+  }
 }

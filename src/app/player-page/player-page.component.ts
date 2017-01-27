@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../player.service';
 import { Router } from '@angular/router';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-
+import { Player } from '../player.model';
 
 @Component({
   selector: 'app-player-page',
@@ -19,4 +19,9 @@ export class PlayerPageComponent implements OnInit {
     this.players= this.playerService.getPlayers();
   }
 
+  detailPage(clickedPlayer)
+  {
+    console.log(clickedPlayer.$key);
+    this.router.navigate(['players', clickedPlayer.$key]);
+  }
 }

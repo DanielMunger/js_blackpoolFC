@@ -1,3 +1,21 @@
-<p>
-  player-detail works!
-</p>
+
+<div class="col s12 m7">
+  <h2 class="header">{{(playerToDisplay | async)?.name}}</h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="http://placehold.it/350x350">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>Position: {{(playerToDisplay | async)?.position}}</p>
+        <p>Jersey: {{(playerToDisplay | async)?.jerseynumber}}</p>
+        <p>Date Of Birth: {{(playerToDisplay | async)?.dateofbirth}}</p>
+        <p>Hieght: {{(playerToDisplay | async)?.hieght}}</p>
+        <p>Weight: {{(playerToDisplay | async)?.weight}} lbs</p>
+      </div>
+      <div class="card-action">
+        <a routerLink="players">Back To All Players</a>
+      </div>
+    </div>
+  </div>
+</div>
