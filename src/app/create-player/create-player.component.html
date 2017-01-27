@@ -1,3 +1,26 @@
-<p>
-  create-player works!
-</p>
+
+<div class="container">
+  <form>
+    <label for="name">Player Name:</label>
+    <input required type="text" name="name" placeholder="Hox Onbegl" #playerName>
+    <label for="position">Player Position:</label>
+    <select #playerPosition requiredclass="select">
+      <option value="Defender">Defender</option>
+      <option value="Midfielder">Midfielder</option>
+      <option value="Striker">Striker</option>
+      <option value="Goalkeeper">GoalKeeper</option>
+    </select>
+    <input required type="text" name="position" placeholder="Defender" #playerPosition>
+    <label for="jerseynumber">Jersey Number:</label>
+    <input required type="number" name="jerseynumber" placeholder="7" #playerNumber>
+    <label for="dob">Player DOB:</label>
+    <input required type="text" name="dob" placeholder="13th of October" #playerDOB>
+    <label for="name">Player Height:</label>
+    <input required type="text" name="name" placeholder="6'0" #playerHeight>
+    <label for="name">Player Weight:</label>
+    <input required type="text" name="name" placeholder="165" #playerWeight>
+    <label for="name">Player Image:</label>
+    <input required type="text" name="name" placeholder="http://www.blackpoolfc.co.uk/cms_images/jm-pp204-3302958_231x264.jpg" #playerImage>
+    <button type="button" name="button" (click)="createPlayer(playerName.value, playerPosition.value, playerNumber.value, playerDOB.value, playerHeight.value, playerWeight.value, playerImage.value)">Create Player</button>
+  </form>
+</div>

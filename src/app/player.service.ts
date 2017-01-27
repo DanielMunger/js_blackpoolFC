@@ -17,4 +17,9 @@ export class PlayerService {
   {
     return this.af.database.object('/players/' + id);
   }
+
+  createPlayer(newPlayer)
+  {
+    this.players.push(newPlayer);
+  }
 }
