@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.jerseynumber {
+  float: right;
+}
+.card-action a{
+  cursor: pointer;
+}
+.select {
+  display: block;
+  width: 15%;
+  margin: 5px;
+}

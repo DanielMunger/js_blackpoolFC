@@ -12,6 +12,7 @@ import { Player } from '../player.model';
 })
 export class PlayerPageComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
+  positionToFilter: string = "all";
 
   constructor(private router: Router, private playerService: PlayerService, private af: AngularFire) { }
 
@@ -23,5 +24,10 @@ export class PlayerPageComponent implements OnInit {
   {
     console.log(clickedPlayer.$key);
     this.router.navigate(['players', clickedPlayer.$key]);
+  }
+
+  onChange(optionFromMenu)
+  {
+    this.positionToFilter = optionFromMenu;
   }
 }

@@ -1,18 +1,26 @@
-<div class="players">
-  <div class="row">
-    <div *ngFor="let player of players | async" class="col s12 m4">
-      <div class="col s12 m7">
-        <div class="card">
-          <div class="card-image">
-            <img src="favicon.png">
-          </div>
-          <div class="card-content">
-            <p>{{player.name}}</p>
-            <p>{{player.position}}</p>
-            <p>{{player.jerseynumber}}</p>
-          </div>
-          <div class="card-action">
-            <a (click)="detailPage(player)">This is a link</a>
+<div class="container">
+  <p>Find Players By Position: </p><select class="select" (change)="onChange($event.target.value)">
+    <option selected="selected" value="all">Player Posistion</option>
+    <option value="Striker">Striker</option>
+    <option value="Midfielder">Midfielder</option>
+    <option value="Goalkeeper">Goalkeeper</option>
+    <option value="Defender">Defender</option>
+  </select>
+  <div class="players">
+    <div class="row">
+      <div *ngFor="let player of players | async | positionFilter:positionToFilter" class="col s12 m4">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="favicon.png">
+            </div>
+            <div class="card-content">
+              <p><strong><em>{{player.name}}</em></strong></p>
+              <p class="jerseynumber">{{player.jerseynumber}}</p>
+            </div>
+            <div class="card-action">
+              <a (click)="detailPage(player)">Profile</a>
+            </div>
           </div>
         </div>
       </div>
