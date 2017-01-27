@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { PlayerPageComponent } from './player-page/player-page.component';
 import { HomeComponent } from './home/home.component';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     PlayerPageComponent,
-    HomeComponent
+    HomeComponent,
+    PlayerDetailComponent
   ],
   imports: [
     BrowserModule,
