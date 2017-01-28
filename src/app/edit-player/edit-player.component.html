@@ -25,5 +25,6 @@
     <label for="name">Player Image:</label>
     <input required type="text" name="name" value={{playerToDisplay.image}} #playerImage>
     <button type="button" name="button" (click)="hideForm(); editPlayer(playerName.value, playerPosition.value, playerNumber.value, playerDOB.value, playerHeight.value, playerWeight.value, playerImage.value)">Edit Player</button>
+    <button (click)="deletePlayer(playerToDisplay)" type="button" name="button">Delete Player</button>
   </form>
 </div>

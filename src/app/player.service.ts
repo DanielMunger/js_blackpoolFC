@@ -48,6 +48,12 @@ export class PlayerService {
       weight: playerToUpdate.weight,
       nationality: playerToUpdate.nationality,
       image: playerToUpdate.image})
+  }
+
+  deletePlayer(playerToDelete)
+  {
+    var playerInFirebase = this.getPlayerById(playerToDelete.$key);
+    playerInFirebase.remove();
 
   }
 }

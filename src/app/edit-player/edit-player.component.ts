@@ -54,4 +54,9 @@ export class EditPlayerComponent implements OnInit {
     this.playerService.updatePlayer(name, position, number, dob, height, weight, image, this.playerToDisplay);
   }
 
+  deletePlayer(player)
+  {
+    console.log(player);
+  }
+
 }
