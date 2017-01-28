@@ -1,4 +1,4 @@
-# BlackpoolFC
+# BlackpoolFC by Daniel Munger
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
@@ -12,6 +12,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Firebase
+Create a project on firebase and copy the relevant information into file named 'src/app/api-keys.ts'. Export a var called "masterFirebaseConfig" with your personal api information inside, taking care to match the firebase config variable names in app.module
 
 ## Running unit tests
 
