@@ -1,16 +1,16 @@
 
 <div class="container">
+  <h3>Create A Player</h3>
   <form>
     <label for="name">Player Name:</label>
     <input required type="text" name="name" placeholder="Hox Onbegl" #playerName>
     <label for="position">Player Position:</label>
-    <select #playerPosition requiredclass="select">
+    <select #playerPosition required class="edit-select">
       <option value="Defender">Defender</option>
       <option value="Midfielder">Midfielder</option>
       <option value="Striker">Striker</option>
       <option value="Goalkeeper">GoalKeeper</option>
     </select>
-    <input required type="text" name="position" placeholder="Defender" #playerPosition>
     <label for="jerseynumber">Jersey Number:</label>
     <input required type="number" name="jerseynumber" placeholder="7" #playerNumber>
     <label for="dob">Player DOB:</label>

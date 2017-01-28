@@ -10,3 +10,7 @@
   width: 15%;
   margin: 5px;
 }
+.edit-select {
+  display: block;
+  width: 50%;
+}
